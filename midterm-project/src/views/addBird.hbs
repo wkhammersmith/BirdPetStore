@@ -1,0 +1,32 @@
+<h1>Add a New Bird</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3 bg-info">
+            <img width = "180" src = "https://ardenroad.files.wordpress.com/2022/10/add_new_bird.png"> </img>
+        </div>
+        <div class="col-6 bg-warning">
+            <form action='/birds/add' method="POST">
+                <label for="name">Enter bird's name: </label>
+                <input type="text" name="name" placeholder="Enter Name" /><br>
+
+                <label for="species">Enter bird species: </label>
+                <input type="text" name="species" placeholder="Enter species" /><br>
+
+                <label for="description">Enter Item Description: </label>
+                <input type="text" name="description" placeholder="Enter Description" /><br>
+
+                <label for="price">Enter Item Price: </label>
+                <input type="text" name="price" placeholder="Enter Price" /><br>
+
+                <label for="image">Enter Image URL: </label>
+                <input type="text" name="image" placeholder="Enter URL" /><br>
+
+                <button type="submit">Submit This New Bird</button>
+            </form>
+        </div>
+    </div>
+</div>
+<p></p>
+    <form action="/birds">
+        <button type="submit">Go back to Birds for Sale</button>
+    </form>    

@@ -1,0 +1,36 @@
+<h1>Available Birds for Sale</h1>
+
+<form action="/birds/add">
+    <button type="submit" class="btn-primary" >Add New Bird</button>
+</form>
+</br>
+
+    {{#each birdList}}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 bg-info">
+            <img width = "100" src = {{image}}> </img>
+        </div>
+
+        <div class="col-5 bg-warning">
+            <h2> {{name}} </h2>
+            Price: ${{price}}
+        <p> <a href="/birds/{{birdId}}">View Details</a> </p>    
+        <p> <a href="/birds/edit/{{birdId}}">Edit Details</a> </p>
+        </div>
+
+        <div class="col-2 bg-secondary">
+            <form action="/birds/delete/{{birdId}}" method="POST">
+                <button type="submit" class="btn-danger">Delete Bird</button>
+             </form>
+        </div>
+    </div>
+</div> 
+    {{/each}}
+<form action="/birds/add">
+    <button type="submit" class="btn-primary" >Add New Bird</button>
+</form>
+
+
+
+

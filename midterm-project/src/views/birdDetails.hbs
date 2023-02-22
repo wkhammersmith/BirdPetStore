@@ -1,0 +1,23 @@
+{{#with foundBird}}
+<h1>Bird Details</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4 bg-info">
+            <img width = "250" src = {{image}}> </img>
+        </div>
+
+        <div class="col-6 bg-warning">
+            <h1>{{name}}</h1>
+            <p>Species: {{species}}</p> 
+            <p>{{description}}</p>    
+            <p>Price: ${{price}}</p>
+            <form action="/birds/edit/{{birdId}}">
+                <button type="submit" onsubmit=`/birds/birdDetails/${birdId}` class="btn-primary">Edit this bird's info</button>
+            </form>
+            <p></p>
+             <form action="/birds">
+                <button type="submit" class="btn-info">Go back to Birds for Sale</button>
+            </form>     
+        </div>
+</div>
+{{/with}}

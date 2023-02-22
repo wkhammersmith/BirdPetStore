@@ -1,0 +1,41 @@
+<h1>Edit This Bird</h1>
+{{#with foundBird}}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4 bg-info">
+            <img width = "200" src = {{image}}> </img>
+        </div>
+
+        <div class="col-6 bg-warning">
+            <form action='/birds/edit/{{birdId}}' method="POST">
+                <label for="name">Enter bird's name: </label>
+                <input type="text" name="name" placeholder="Enter Name"
+                    value="{{name}}"/><br>
+
+                <label for="species">Enter bird species: </label>
+                <input type="text" name="species" placeholder="Enter Speicies"
+                    value="{{species}}" /><br>
+
+                <label for="description">Enter Item Description: </label>
+                <input type="text" name="description" placeholder="Enter Description"
+                    value="{{description}}" /><br>
+
+                <label for="price">Enter Item Price: </label>
+                <input type="text" name="price" placeholder="Enter Price"
+                    value="{{price}}" /><br>
+                <br>
+                 <button type="submit" class="btn-primary">Submit Changes To This Bird's Info</button>
+                <p></p>
+            </form>
+
+             <form action="/birds/delete/{{birdId}}" method="POST">
+                <button type="submit" class="btn-danger">Delete This Bird</button>
+            </form>   
+            <p></p>
+             <form action="/birds">
+                <button type="submit" class="btn-info">Go back to Birds for Sale</button>
+            </form>   
+        </div>
+</div>
+
+{{/with}}
